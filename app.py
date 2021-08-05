@@ -1,10 +1,15 @@
 import numpy as np
 import pandas as pd
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
+nltk.download('punkt')
+nltk.download('wordnet')
 from nltk.stem import LancasterStemmer, WordNetLemmatizer, PorterStemmer
 from nltk.tokenize import word_tokenize
-import nltk
+nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from sklearn.metrics import accuracy_score, classification_report
 from textblob import TextBlob
 import pickle
 import streamlit as st
